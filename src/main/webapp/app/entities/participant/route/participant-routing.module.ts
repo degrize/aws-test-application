@@ -15,7 +15,6 @@ const participantRoute: Routes = [
     data: {
       defaultSort: 'id,' + ASC,
     },
-    canActivate: [UserRouteAccessService],
   },
   {
     path: ':id/view',
@@ -23,7 +22,6 @@ const participantRoute: Routes = [
     resolve: {
       participant: ParticipantRoutingResolveService,
     },
-    canActivate: [UserRouteAccessService],
   },
   {
     path: 'new',
@@ -31,7 +29,6 @@ const participantRoute: Routes = [
     resolve: {
       participant: ParticipantRoutingResolveService,
     },
-    canActivate: [UserRouteAccessService],
   },
   {
     path: ':id/edit',
@@ -39,7 +36,6 @@ const participantRoute: Routes = [
     resolve: {
       participant: ParticipantRoutingResolveService,
     },
-    canActivate: [UserRouteAccessService],
   },
 ];
 

@@ -12,7 +12,7 @@
         id="jh-create-entity"
         data-cy="entityCreateButton"
         class="btn btn-primary jh-create-entity create-participant"
-        [routerLink]="['/participant/new']"
+        [routerLink]="['/new']"
       >
         <fa-icon icon="plus"></fa-icon>
         <span jhiTranslate="testAwsApplicationApp.participant.home.createLabel"> Créer un nouveau Participant </span>
@@ -68,7 +68,7 @@
       <tbody>
         <tr *ngFor="let participant of participants; trackBy: trackId" data-cy="entityTable">
           <td>
-            <a [routerLink]="['/participant', participant.id, 'view']">{{ participant.id }}</a>
+            {{ participant.id }}
           </td>
           <td>{{ participant.nom }}</td>
           <td>{{ participant.prenom }}</td>
@@ -76,26 +76,6 @@
           <td>{{ participant.email }}</td>
           <td class="text-end">
             <div class="btn-group">
-              <button
-                type="submit"
-                [routerLink]="['/participant', participant.id, 'view']"
-                class="btn btn-info btn-sm"
-                data-cy="entityDetailsButton"
-              >
-                <fa-icon icon="eye"></fa-icon>
-                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">Voir</span>
-              </button>
-
-              <button
-                type="submit"
-                [routerLink]="['/participant', participant.id, 'edit']"
-                class="btn btn-primary btn-sm"
-                data-cy="entityEditButton"
-              >
-                <fa-icon icon="pencil-alt"></fa-icon>
-                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Editer</span>
-              </button>
-
               <button type="submit" (click)="delete(participant)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
                 <fa-icon icon="times"></fa-icon>
                 <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Supprimer</span>

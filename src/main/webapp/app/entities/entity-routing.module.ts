@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     RouterModule.forChild([
       {
-        path: 'participant',
+        path: '',
         data: { pageTitle: 'testAwsApplicationApp.participant.home.title' },
         loadChildren: () => import('./participant/participant.module').then(m => m.ParticipantModule),
       },
