@@ -1,0 +1,31 @@
+{
+  "testAwsApplicationApp": {
+    "participant": {
+      "home": {
+        "title": "Participants",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Participant",
+        "createOrEditLabel": "Créer ou éditer un Participant",
+        "notFound": "Aucun Participant trouvé"
+      },
+      "created": "Un nouveau Participant a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Participant avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Participant avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Participant {{ id }} ?"
+      },
+      "detail": {
+        "title": "Participant"
+      },
+      "id": "ID",
+      "nom": "Nom",
+      "prenom": "Prenom",
+      "contact": "Contact",
+      "email": "Email",
+      "help": {
+        "nom": "Nom de famille.\n@author MEDA.",
+        "contact": "Numero à 10 chiffres.\n@author MEDA."
+      }
+    }
+  }
+}
