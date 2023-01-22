@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="participant">
+      <h2 data-cy="participantDetailsHeading"><span jhiTranslate="testAwsApplicationApp.participant.detail.title">Participant</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ participant.id }}</span>
+        </dd>
+        <dt>
+          <span jhiTranslate="testAwsApplicationApp.participant.nom" [ngbTooltip]="'testAwsApplicationApp.participant.help.nom' | translate"
+            >Nom</span
+          >
+        </dt>
+        <dd>
+          <span>{{ participant.nom }}</span>
+        </dd>
+        <dt><span jhiTranslate="testAwsApplicationApp.participant.prenom">Prenom</span></dt>
+        <dd>
+          <span>{{ participant.prenom }}</span>
+        </dd>
+        <dt>
+          <span
+            jhiTranslate="testAwsApplicationApp.participant.contact"
+            [ngbTooltip]="'testAwsApplicationApp.participant.help.contact' | translate"
+            >Contact</span
+          >
+        </dt>
+        <dd>
+          <span>{{ participant.contact }}</span>
+        </dd>
+        <dt><span jhiTranslate="testAwsApplicationApp.participant.email">Email</span></dt>
+        <dd>
+          <span>{{ participant.email }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+      </button>
+
+      <button type="button" [routerLink]="['/participant', participant.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+      </button>
+    </div>
+  </div>
+</div>
